@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=DM+Serif+Text&family=Orbitron&family=Secular+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+   
+.nav-container{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px;
+    background-color: black;
+    position: fixed;
+     top: 0;
+     left: 0;
+   
+}
+.nav-title h1{
+    color: white;
+    font-family: 'Averia Serif Libre', serif;
+    background-color: black;
+  
+}
+.search input{
+  padding: 5px;
+}
+button{
+    padding: 5px;
+}
