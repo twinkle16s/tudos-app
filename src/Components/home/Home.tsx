@@ -2,20 +2,26 @@ import React, { useState } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
+interface Todo {
+  title: string;
+  Desc: string;
+  sno: number;
+}
+
 function Home() {
-  const [title, setTitle] = useState("");
-  const [todo, setTodo] = useState("");
-  const [list, setList] = useState([]);
-  const [edit, setEdit] = useState(null); 
+  const [title, setTitle] = useState<string>("");
+  const [todo, setTodo] = useState<string>("");
+  const [list, setList] = useState<Todo[]>([]);
+  const [edit, setEdit] = useState<Todo | null>(null);
 
   const handleClick = () => {
     if (todo !== "" && title !== "") {
       if (edit) {
-         const updatedList = list.map((item) =>
+        const updatedList = list.map((item) =>
           item.sno === edit.sno ? { ...item, title, Desc: todo } : item
         );
         setList(updatedList);
-        setEdit(null); 
+        setEdit(null);
       } else {
         setList([...list, { Desc: todo, title, sno: list.length + 1 }]);
       }
@@ -24,20 +30,19 @@ function Home() {
     }
   };
 
-  const handleEdit = (item) => {
+  const handleEdit = (item: Todo) => {
     setTitle(item.title);
     setTodo(item.Desc);
     setEdit(item);
   };
 
-  const handleDelete = (sno) => {
+  const handleDelete = (sno: number) => {
     setList((updateList) => updateList.filter((item) => item.sno !== sno));
   };
 
   return (
     <div className="container">
-      <div className="div-container">
-        <h1>Todo List</h1>
+        <h1 className="text">Todo List</h1>
         <form className="input-div">
           <input
             type="text"
@@ -57,12 +62,11 @@ function Home() {
           />
           <div className="btn1" onClick={handleClick}>
             <Link to="/" className="btnLink">
-              <i className="fa-solid fa-plus" />
+              <i className="fa-solid fa-plus"></i>
             </Link>
           </div>
         </form>
-      </div>
-      
+
       <div className="table">
         <div className="table-heading">
           <div>Sno</div>
@@ -85,7 +89,7 @@ function Home() {
                   <i
                     className="fa-solid fa-trash d-icon"
                     onClick={() => handleDelete(item.sno)}
-                  />
+                  ></i>
                 </div>
               </div>
             </div>
