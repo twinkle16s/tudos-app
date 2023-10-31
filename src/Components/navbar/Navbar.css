@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
 }
-   
 .nav-container{
     width: 100vw;
     display: flex;
@@ -15,7 +14,7 @@
      top: 0;
      left: 0;
    
-}
+} 
 .nav-title h1{
     color: white;
     font-family: 'Averia Serif Libre', serif;

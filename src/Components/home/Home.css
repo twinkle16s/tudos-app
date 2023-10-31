@@ -7,24 +7,20 @@
   padding-top: 2px;
  
 }
-
-.container h1 {
+.text{
+  text-align: center;
   font-family: "Lobster", sans-serif;
   letter-spacing: 3px;
-  color: black;
+  color: white;
   font-size: 45px;
-  position: fixed;
-  top: 70px;
-  left: 270px;
+  margin-top: 75px;
 }
 .input-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 125px;
-  right: 100px;
+   
 }
 .input-div input {
   width: 620px;
@@ -77,25 +73,16 @@
   display: grid;
   gap: 10px;
   font-family: "Playpen Sans", cursive;
-  position:relative;
-  top: 430px;
-  left: 10px;  
 }
 .table-heading {
   display: flex;
-  /* justify-content: space-between; */
-  /* align-items: center; */
+  justify-content: space-between;
+  align-items: center;
   background-color: rgb(29, 78, 77);
   color: #fff;
   padding: 10px;
   border-radius: 5px;
-  position: fixed;
-  top: 390px;
-  left: 0px;
- 
-}
-.table-heading div{
-   margin:5px 58px;
+  margin:5px 89px;
 }
 .heading {
   display: flex;
@@ -105,7 +92,7 @@
   color: #fff;
   padding: 8px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-  /* margin: 0px 90px; */
+  margin: 0px 90px;
   border-radius: 5px;
 }
 .heading:hover{
